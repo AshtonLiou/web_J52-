@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 100px;
+  border: 5px solid white;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: #4a6783;
+}
+
+::-webkit-scrollbar-thumb:hover { 
+  border-radius: 100px;
+  background: #555;
+}
+
+nav.container {
+  text-align: center;
+  padding: 1em;
+}
+
+nav.container>a {
+  position: relative;
+  color: #fff;
+  font: 25px "微軟正黑體";
+  font-weight: 900;
+  text-decoration: none;
+  margin: 0 30px;
+  padding: 10px;
+}
+
+nav.container>a:hover {
+  color: #808080;
+}
+
+nav.container>a::before,
+nav.container>a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: #fff;
+  left: 0;
+  opacity: 0;
+  transition: .5s;
+}
+
+nav.container>a::before {
+  top: 0;
+  transform: translateY(10px);
+}
+
+nav.container>a::after {
+  bottom: 0;
+  transform: translateY(-10px);
+}
+
+nav.container>a:hover::before,
+nav.container>a:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bgi1 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 400px;
+  background: no-repeat center top / 1920px auto;
+  background-image: linear-gradient(to top, rgb(245, 245, 245), rgba(255, 255, 255, 0)), url(./img/Shanghai8.jpg);
+  z-index: -1;
+}
+
+.bgi2 {
+  width: 100%;
+  height: 400px;
+  background: no-repeat center top / 1920px auto;
+  background-image: linear-gradient(to top, rgb(245, 245, 245), rgba(255, 255, 255, 0)), url(./img/Shanghai9.jpg);
+  z-index: -1;
+  position: absolute;
+}
+
+.bgi3 {
+  width: 100%;
+  height: 400px;
+  background: no-repeat center top / 1920px auto;
+  background-image: linear-gradient(to top, rgb(245, 245, 245), rgba(255, 255, 255, 0)), url(./img/Shanghai11.jpg);
+  z-index: -1;
+  position: absolute;
+}
+
+.battle {
+  color: white;
+  position: absolute;
+  top: 100px;
+  left: 300px;
+  font-size: 50px;
+  font-weight: 800;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+form {
+  backdrop-filter: blur(10px);
+  border: 2px solid #4a6783;
+  border-radius: 10px;
+  padding: 10%;
+  transition: .3s;
+}
+
+input:not([type="file"]),
+textarea {
+  background-color: rgba(115, 139, 170, .5);
+  color: #fff;
+  height: 5vh;
+  border-radius: 20px;
+  border: none;
+  box-shadow: inset 5px 5px 10px 5px rgba(0, 0, 0, .1);
+  font-size: 20px;
+  font-weight: 700;
+  outline: none;
+  padding: 1em;
+  transition: .5s;
+}
+
+input:focus:not([type="file"]),
+textarea {
+  box-shadow: inset -5px -5px 10px 5px rgba(0, 0, 0, .1);
+}
+
+#captcha {
+  font-size: 40px;
+  font-family: "Papyrus";
+  user-select: none;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+::placeholder {
+  color: rgb(230, 240, 250);
+}
+
+.rootBtn {
+  background: linear-gradient(#4a6783, #4a6783) 0 0 / 0 100% no-repeat;
+  color: #4a6783;
+  font-weight: 900;
+  text-shadow: 3px 0 10px #e1e1e1;
+  border: 5px solid #4a6783;
+  border-radius: 10px;
+  transition: ease-in-out .5s;
+}
+
+.warningBtn {
+  background: linear-gradient(#e0a800, #e0a800) 0 0 / 0 100% no-repeat;
+  color: #e0a800;
+  font-weight: 900;
+  text-shadow: 3px 0 10px #e1e1e1;
+  border: 5px solid #e0a800;
+  border-radius: 10px;
+  transition: ease-in-out .5s;
+}
+
+.dangerBtn {
+  background: linear-gradient(#dc3545, #dc3545) 0 0 / 0 100% no-repeat;
+  color: #dc3545;
+  font-weight: 900;
+  text-shadow: 3px 0 10px #e1e1e1;
+  border: 5px solid #dc3545;
+  border-radius: 10px;
+  transition: ease-in-out .5s;
+}
+
+.rootBtn:hover,
+.warningBtn:hover,
+.dangerBtn:hover {
+  background-size: 100% 100%;
+  color: #e1e1e1;
+}
+
+.rootBtn:active,
+.warningBtn:active,
+.dangerBtn:active {
+  transform: scale(.9);
+}
+
+.shake {
+  animation: shake .3s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-10px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  75% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+tr {
+  background-color: rgba(74, 103, 131, .2);
+  border: 3px solid #343A40;
+}
